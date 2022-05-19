@@ -151,12 +151,13 @@ $color_black_white:#FFF;
                 width: 25px;
                 height: 25px;
                 background: url(../icons/loupe.svg);
+                fill: black;
                 &:hover {
                     fill: $color_purple;
                 }
             }
             .loupe-img:hover {
-
+                fill: $color_purple;
             }
             
         }

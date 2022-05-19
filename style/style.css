@@ -268,6 +268,11 @@ h1, h2, h3, h4, h5, h6 {
   width: 25px;
   height: 25px;
   background: url(../icons/loupe.svg);
+  fill: black;
+}
+
+.page .head .search .loupe-img:hover {
+  fill: #CEAFC8;
 }
 
 .page .head .search .loupe-img:hover {
