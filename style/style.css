@@ -127,6 +127,14 @@ h1, h2, h3, h4, h5, h6 {
   color: #052E43;
 }
 
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
 .page {
   margin: 0 auto;
   width: 1920px;
@@ -196,14 +204,13 @@ h1, h2, h3, h4, h5, h6 {
 .page .head .menu .burger-menu .icons-menu {
   width: 35px;
   height: 14px;
-  background: url(../icons/menu.svg);
 }
 
-.page .head .menu .burger-menu .icons-menu:hover {
-  background-color: #CEAFC8;
+.page .head .menu .burger-menu:hover svg path {
+  fill: #CEAFC8;
 }
 
-.page .head .menu .burger-menu span:hover {
+.page .head .menu .burger-menu:hover span {
   color: #CEAFC8;
 }
 
@@ -264,18 +271,16 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 4px;
 }
 
-.page .head .search .loupe-img {
-  width: 25px;
-  height: 25px;
-  background: url(../icons/loupe.svg);
-  fill: black;
-}
-
-.page .head .search .loupe-img:hover {
+.page .head .search .shop-cart .shopping-cart:hover svg path {
   fill: #CEAFC8;
 }
 
-.page .head .search .loupe-img:hover {
+.page .head .search .loupe-img {
+  width: 25px;
+  height: 25px;
+}
+
+.page .head .search .loupe-img:hover svg path {
   fill: #CEAFC8;
 }
 
@@ -310,6 +315,49 @@ h1, h2, h3, h4, h5, h6 {
 
 .page .wrapper .text_flex button {
   margin-bottom: 15px;
+}
+
+.page .wrapper .text_flex .button-see-hover {
+  margin-bottom: 15px;
+}
+
+.page .wrapper .see {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page .wrapper .see .button-see-hover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  opacity: 0;
+}
+
+.page .wrapper .see .button-see-hover .arrow {
+  margin-right: 10px;
+  margin-left: -30px;
+}
+
+.page .wrapper .see button {
+  color: #CEAFC8;
 }
 
 .page .wrapper .left-block {
@@ -354,8 +402,12 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 24px;
 }
 
-.page .wrapper .left-block .frutis button {
-  color: #CEAFC8;
+.page .wrapper .left-block .frutis:hover .button-see-hover {
+  opacity: 1;
+}
+
+.page .wrapper .left-block .frutis:hover button {
+  color: #FFF;
 }
 
 .page .wrapper .left-block .berries_juices {
@@ -403,6 +455,14 @@ h1, h2, h3, h4, h5, h6 {
   color: #FC8663;
 }
 
+.page .wrapper .left-block .berries_juices .berries:hover .button-see-hover {
+  opacity: 1;
+}
+
+.page .wrapper .left-block .berries_juices .berries:hover button {
+  color: #FFF;
+}
+
 .page .wrapper .left-block .berries_juices .juices {
   width: 360px;
   display: -webkit-box;
@@ -432,6 +492,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .page .wrapper .left-block .berries_juices .juices button {
   color: #88BCB9;
+}
+
+.page .wrapper .left-block .berries_juices .juices:hover .button-see-hover {
+  opacity: 1;
+}
+
+.page .wrapper .left-block .berries_juices .juices:hover button {
+  color: #FFF;
 }
 
 .page .wrapper .right-block {
@@ -466,10 +534,26 @@ h1, h2, h3, h4, h5, h6 {
 
 .page .wrapper .right-block .text_flex_right button {
   color: #FFD452;
-  margin-top: 47px;
+  margin-top: 42px;
 }
 
 .page .wrapper .right-block .vegetables-img {
   margin-left: 65px;
 }
+
+.page .wrapper .right-block .button-see-hover {
+  margin-top: 42px;
+}
+
+.page .wrapper .right-block:hover .button-see-hover {
+  opacity: 1;
+}
+
+.page .wrapper .right-block:hover button {
+  color: #FFF;
+}
+
+/* animation */
+
+
 /*# sourceMappingURL=style.css.map */

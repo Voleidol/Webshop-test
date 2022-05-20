@@ -66,6 +66,14 @@ $color_black_white:#FFF;
     color:$color_description_section;
 }
 
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
 @mixin see_button($c) {
     color: $c;
 }
@@ -101,16 +109,21 @@ $color_black_white:#FFF;
                 .icons-menu {
                     width: 35px;
                     height: 14px;
-                    background: url(../icons/menu.svg);
-                    &:hover {
-                        background-color:$color_purple;
-                    }
+                    
                 }
                 span {
                     @extend .menu_font;
                 }
-                span:hover {
-                    color:$color_purple;
+                
+               &:hover {
+                    svg {
+                        path {
+                            fill: $color_purple;
+                        }                  
+                    }
+                    span {
+                        color:$color_purple;
+                    }
                 }            
             }
             .phone {
@@ -145,21 +158,28 @@ $color_black_white:#FFF;
                     color: $color_black_white;
                     background-color: $color_purple;
                     border-radius: 4px;
-                }               
+                }  
+                .shopping-cart {
+                    &:hover {
+                        svg {
+                            path {
+                                fill: $color_purple;
+                            }
+                        }
+                    }                
+                }             
             }
             .loupe-img {
                 width: 25px;
                 height: 25px;
-                background: url(../icons/loupe.svg);
-                fill: black;
                 &:hover {
-                    fill: $color_purple;
-                }
-            }
-            .loupe-img:hover {
-                fill: $color_purple;
-            }
-            
+                    svg {
+                        path {
+                            fill: $color_purple;
+                        }                  
+                    }
+                }              
+            }           
         }
     }
 
@@ -186,13 +206,37 @@ $color_black_white:#FFF;
             button {
                 margin-bottom: 15px;
             }
+            .button-see-hover {
+                margin-bottom: 15px;
+            }
         }
+        .see {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: center;
+            .button-see-hover {
+                display: flex;
+                flex-direction: row;
+                justify-content: start;
+                .arrow {
+                    margin-right: 10px;
+                    margin-left: -30px;
+                }
+                opacity: 0;
+            }
+            button {
+                @include see_button($color_purple);
+            }             
+        }
+
         .left-block {
             width: 750px;
             height: 266*2+30px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            
             .frutis {
                 display: flex;
                 flex-direction: row;
@@ -203,9 +247,14 @@ $color_black_white:#FFF;
                     justify-content: end;                 
                     margin-top: 24px;
                 }
-                button {
-                    @include see_button($color_purple);
-                }
+                &:hover {
+                    .button-see-hover {
+                        opacity: 1;
+                    }
+                    button {
+                        color: $color_black_white;
+                    }
+                }         
             }
             .berries_juices {
                 display: flex;
@@ -225,6 +274,14 @@ $color_black_white:#FFF;
                     button {
                         @include see_button($color_orange);
                     }
+                    &:hover {
+                        .button-see-hover {
+                            opacity: 1;
+                        }
+                        button {
+                            color: $color_black_white;
+                        }
+                    }
                 }
                 .juices {
                     width: 360px;
@@ -238,6 +295,14 @@ $color_black_white:#FFF;
                     }
                     button {
                         @include see_button($color_turquoise);
+                    }
+                    &:hover {
+                        .button-see-hover {
+                            opacity: 1;
+                        }
+                        button {
+                            color: $color_black_white;
+                        }
                     }
                 }
             }
@@ -257,15 +322,27 @@ $color_black_white:#FFF;
                 padding-right: 0;
                 button {
                     @include see_button($color_yellow);
-                    margin-top: 47px;
+                    margin-top: 42px;
                 }
             }
 
             .vegetables-img {
                 margin-left: 65px;
             }
+            .button-see-hover {
+                margin-top: 42px;
+            }
+            &:hover {
+                .button-see-hover {
+                    opacity: 1;
+                }
+                button {
+                    color: $color_black_white;
+                }
+            }
         }
     }
+
 }
 
 

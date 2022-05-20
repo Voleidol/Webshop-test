@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/styleNativeCss.css">
     <title>WebshopTest</title>
 </head>
 <body>
@@ -16,8 +17,15 @@
                 <div class="menu">
                     <div class="burger-menu">
                         <span>МЕНЮ</span>
-                        <div class="icons-menu"></div>
-                        <!-- <img src="icons/menu.svg" alt=""> -->
+                        <div class="icons-menu">
+                            <a href="#">
+                                <svg width="35" height="14" viewBox="0 0 35 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.09372 2H33.9063C34.5101 2 35 1.55195 35 1C35 0.447964 34.51 0 33.9063 0H1.09372C0.489949 0 0 0.448047 0 1C0 1.55195 0.490039 2 1.09372 2Z" fill="#292B2A"/>
+                                    <path d="M33.9063 6H1.09372C0.489949 6 0 6.44805 0 7C0 7.55195 0.490039 8 1.09372 8H33.9063C34.5101 8 35 7.55195 35 7C35 6.44805 34.5101 6 33.9063 6Z" fill="#292B2A"/>
+                                    <path d="M33.8637 12H11.1363C10.509 12 10 12.448 10 13C10 13.552 10.5091 14 11.1363 14H33.8637C34.491 14 35 13.552 35 13C35.0001 12.448 34.491 12 33.8637 12Z" fill="#292B2A"/>
+                                </svg>
+                            </a>                 
+                        </div>
                     </div>
                     <div class="phone">
                         <a href="tel:+78312910707">+7(831)291-07-07 <span>горячая линия</span></a>
@@ -30,18 +38,24 @@
                 </div>
     
                 <div class="search">
-                    <div>
-                        <svg class="loupe-img" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M24.6945 23.2218L17.5852 16.1125C18.9623 14.4115 19.7915 12.25 19.7915 9.89587C19.7915 4.43968 15.3519 0.00012207 9.8957 0.00012207C4.43951 0.00012207 0 4.43963 0 9.89583C0 15.352 4.43956 19.7916 9.89575 19.7916C12.2499 19.7916 14.4113 18.9624 16.1123 17.5854L23.2216 24.6947C23.4248 24.8978 23.6914 24.9999 23.9581 24.9999C24.2248 24.9999 24.4915 24.8978 24.6946 24.6947C25.1019 24.2874 25.1019 23.629 24.6945 23.2218ZM9.89575 17.7083C5.58745 17.7083 2.08333 14.2041 2.08333 9.89583C2.08333 5.58752 5.58745 2.0834 9.89575 2.0834C14.2041 2.0834 17.7082 5.58752 17.7082 9.89583C17.7082 14.2041 14.204 17.7083 9.89575 17.7083Z" fill="#292B2A"/>
-                        </svg>
-                        <!-- <div class="loupe-img"></div> -->
-                        <!-- <img src="icons/loupe.svg" alt=""> -->
+                    <div class="loupe-img">
+                        <a href="#">
+                            <svg width="25" height="25" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24.6945 23.2218L17.5852 16.1125C18.9623 14.4115 19.7915 12.25 19.7915 9.89587C19.7915 4.43968 15.3519 0.00012207 9.8957 0.00012207C4.43951 0.00012207 0 4.43963 0 9.89583C0 15.352 4.43956 19.7916 9.89575 19.7916C12.2499 19.7916 14.4113 18.9624 16.1123 17.5854L23.2216 24.6947C23.4248 24.8978 23.6914 24.9999 23.9581 24.9999C24.2248 24.9999 24.4915 24.8978 24.6946 24.6947C25.1019 24.2874 25.1019 23.629 24.6945 23.2218ZM9.89575 17.7083C5.58745 17.7083 2.08333 14.2041 2.08333 9.89583C2.08333 5.58752 5.58745 2.0834 9.89575 2.0834C14.2041 2.0834 17.7082 5.58752 17.7082 9.89583C17.7082 14.2041 14.204 17.7083 9.89575 17.7083Z" fill="#292B2A"/>
+                            </svg>
+                        </a> 
                     </div>
                     <div>
                         <img src="icons/shop_cart_line.svg" alt="">
                     </div>
                     <div class="shop-cart">
-                        <img src="icons/shopping-cart.svg" alt="">                      
+                        <div class="shopping-cart">
+                            <a href="#">
+                                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M27.7549 6.36475C27.5472 6.10925 27.2355 5.96094 26.9062 5.96094H7.09494L7.01378 5.21544L7.01088 5.19148C6.6226 2.23191 4.07876 0 1.09375 0C0.489672 0 0 0.489672 0 1.09375C0 1.69783 0.489672 2.1875 1.09375 2.1875C2.9808 2.1875 4.58954 3.59565 4.8405 5.46481L6.14059 17.4086C5.00363 17.9246 4.21094 19.0707 4.21094 20.3984C4.21094 20.4076 4.21105 20.4167 4.21127 20.4258C4.21105 20.4349 4.21094 20.444 4.21094 20.4531C4.21094 22.2624 5.68291 23.7344 7.49219 23.7344H7.93723C7.826 24.0605 7.76562 24.41 7.76562 24.7734C7.76562 26.5525 9.21304 28 10.9922 28C12.7713 28 14.2187 26.5525 14.2187 24.7734C14.2187 24.41 14.1584 24.0605 14.0471 23.7344H18.7654C18.6542 24.0605 18.5938 24.41 18.5938 24.7734C18.5938 26.5525 20.0412 28 21.8204 28C23.5995 28 25.0469 26.5525 25.0469 24.7734C25.0469 22.9943 23.5995 21.5469 21.8204 21.5469H7.49219C6.88909 21.5469 6.39844 21.0562 6.39844 20.4531C6.39844 20.444 6.39833 20.4349 6.39811 20.4258C6.39833 20.4167 6.39844 20.4076 6.39844 20.3984C6.39844 19.7953 6.88909 19.3047 7.49219 19.3047H21.4556C23.3972 19.3047 25.1789 18.1034 25.995 16.2443C26.2377 15.6912 25.9862 15.046 25.4331 14.8031C24.88 14.5604 24.2348 14.8119 23.992 15.3651C23.532 16.4131 22.5127 17.1172 21.4556 17.1172H8.30927L7.33305 8.14844H25.5608L25.0257 10.7142C24.9023 11.3055 25.2817 11.8849 25.873 12.0082C25.9483 12.0239 26.0234 12.0315 26.0975 12.0315C26.6045 12.0315 27.0594 11.6769 27.1671 11.1608L27.9769 7.27803C28.0442 6.9557 27.9626 6.62025 27.7549 6.36475ZM21.8203 23.7344C22.3933 23.7344 22.8594 24.2005 22.8594 24.7734C22.8594 25.3464 22.3933 25.8125 21.8203 25.8125C21.2474 25.8125 20.7812 25.3464 20.7812 24.7734C20.7812 24.2005 21.2474 23.7344 21.8203 23.7344ZM10.9922 23.7344C11.5651 23.7344 12.0312 24.2005 12.0312 24.7734C12.0312 25.3464 11.5651 25.8125 10.9922 25.8125C10.4192 25.8125 9.95312 25.3464 9.95312 24.7734C9.95312 24.2005 10.4192 23.7344 10.9922 23.7344Z" fill="#292B2A"/>
+                                </svg>
+                            </a>      
+                        </div>                     
                         <span>15</span>
                         
                     </div>
@@ -52,13 +66,21 @@
         <section>
             <div class="wrapper">
                 <div class="left-block">
-                    <div class="frutis">
+                    <div class="frutis ">
+                        <div class="prob"></div>
                         <div class="text_flex">
                             <div>
                                 <h4>Фрукты</h4>
                                 <span>Скидка 20% на турецкие фрукты</span>
                             </div>
-                            <div><button class="see">Смотреть</button></div>   
+                            <div class="see">
+                                
+                                <div class="button-see-hover">
+                                    <img src="icons/hover/Ellipse-hover.svg" alt="">
+                                    <img class="arrow" src="icons/hover/right-arrow-hover.svg" alt="">
+                                </div>
+                                <button class="button-see">Смотреть</button>
+                            </div>   
                         </div>
                         <div class="frutis-img">
                             <img src="img/frutis.png" alt="">
@@ -72,8 +94,12 @@
                                     <h4>Ягоды</h4>
                                     <span>Сезонные новинки</span>
                                 </div>
-                                <div>
-                                    <button class="see">Смотреть</button>
+                                <div class="see">
+                                    <div class="button-see-hover">
+                                        <img src="icons/hover/Ellipse-hover.svg" alt="">
+                                        <img class="arrow" src="icons/hover/right-arrow-hover.svg" alt="">
+                                    </div>
+                                    <button class="button-see">Смотреть</button>
                                 </div>
                                 
                                 
@@ -89,8 +115,12 @@
                                     <h4>Соки</h4>
                                     <span>Новые вкусы</span>
                                 </div>
-                                <div>
-                                    <button class="see">Смотреть</button>
+                                <div class="see">
+                                    <div class="button-see-hover">
+                                        <img src="icons/hover/Ellipse-hover.svg" alt="">
+                                        <img class="arrow" src="icons/hover/right-arrow-hover.svg" alt="">
+                                    </div>
+                                    <button class="button-see">Смотреть</button>
                                 </div>
                                 
                                 
@@ -108,8 +138,12 @@
                             <h4>Овощи</h4>
                             <span>Горшочек свежей зелени в подарок при любой покупке</span>
                         </div>
-                        <div>
-                            <button class="see">Смотреть</button>
+                        <div class="see">
+                            <div class="button-see-hover">
+                                <img src="icons/hover/Ellipse-hover.svg" alt="">
+                                <img class="arrow" src="icons/hover/right-arrow-hover.svg" alt="">
+                            </div>
+                            <button class="button-see">Смотреть</button>
                         </div>
                         
                         
@@ -117,6 +151,15 @@
                     <div class="vegetables-img">
                         <img src="img/Vegetables.png" alt="">
                     </div>
+                </div>
+            </div>
+            <div class="animation">
+                <div class="fix">
+                    <div class="one"></div>
+                    <div class="two"></div>
+                </div>
+                <div class="zed">
+                    <h4>Zagolovok</h4>
                 </div>
             </div>
         </section>
