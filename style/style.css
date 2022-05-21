@@ -348,6 +348,44 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: -30px;
 }
 
+.page .wrapper .see .button-see-hover-juices {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  opacity: 0;
+}
+
+.page .wrapper .see .button-see-hover-juices .arrow {
+  margin-right: 10px;
+  margin-left: -30px;
+}
+
+.page .wrapper .see .button-see-hover-vegetables {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  opacity: 0;
+}
+
+.page .wrapper .see .button-see-hover-vegetables .arrow {
+  margin-right: 10px;
+  margin-left: -30px;
+}
+
 .page .wrapper .see button {
   color: #CEAFC8;
 }
@@ -778,8 +816,33 @@ h1, h2, h3, h4, h5, h6 {
           animation: rad-berries 1.5s ease-out forwards;
 }
 
-.page .wrapper .berries_juices .animation-jucies .juices {
+.page .wrapper .berries_juices .animation-juices {
+  position: absolute;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 24px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   width: 360px;
+  height: 266px;
+  margin-top: 20px;
+  font-weight: 600;
+  color: red;
+  background-color: transparent;
+  border-radius: 3px;
+  position: relative;
+  overflow: hidden;
+}
+
+.page .wrapper .berries_juices .animation-juices div {
+  position: relative;
+}
+
+.page .wrapper .berries_juices .animation-juices .juices {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 360px;
+  height: 266px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -792,7 +855,11 @@ h1, h2, h3, h4, h5, h6 {
           justify-content: space-between;
 }
 
-.page .wrapper .berries_juices .animation-jucies .juices .juices-img {
+.page .wrapper .berries_juices .animation-juices .juices .text_flex {
+  z-index: 3;
+}
+
+.page .wrapper .berries_juices .animation-juices .juices .juices-img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -803,21 +870,194 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
+  z-index: 1;
 }
 
-.page .wrapper .berries_juices .animation-jucies .juices button {
+@-webkit-keyframes seeHover-juices {
+  0% {
+    margin-right: -50px;
+    color: #88BCB9;
+  }
+  100% {
+    margin-right: 0;
+    color: #FFF;
+  }
+}
+
+@keyframes seeHover-juices {
+  0% {
+    margin-right: -50px;
+    color: #88BCB9;
+  }
+  100% {
+    margin-right: 0;
+    color: #FFF;
+  }
+}
+
+@-webkit-keyframes seeHover-btn-juices {
+  0% {
+    color: #88BCB9;
+  }
+  100% {
+    color: #FFF;
+  }
+}
+
+@keyframes seeHover-btn-juices {
+  0% {
+    color: #88BCB9;
+  }
+  100% {
+    color: #FFF;
+  }
+}
+
+.page .wrapper .berries_juices .animation-juices .juices button {
+  background: none;
   color: #88BCB9;
+  margin-top: 14px;
 }
 
-.page .wrapper .berries_juices .animation-jucies .juices:hover .button-see-hover {
+.page .wrapper .berries_juices .animation-juices .juices:hover .button-see-hover-juices {
   opacity: 1;
 }
 
-.page .wrapper .berries_juices .animation-jucies .juices:hover button {
+.page .wrapper .berries_juices .animation-juices .juices:hover .button-see-hover-juices img {
+  -webkit-animation: seeHover-juices 1.5s linear;
+          animation: seeHover-juices 1.5s linear;
+}
+
+.page .wrapper .berries_juices .animation-juices .juices:hover button {
+  -webkit-animation: seeHover-btn-juices 1.5s linear;
+          animation: seeHover-btn-juices 1.5s linear;
   color: #FFF;
 }
 
+@keyframes wave {
+  0% {
+    top: 200px;
+    -webkit-transform: translate(0%, 0%) rotate(0deg);
+            transform: translate(0%, 0%) rotate(0deg);
+  }
+  0% {
+    top: 200px;
+    -webkit-transform: translate(-50%, -75%) rotate(360deg);
+            transform: translate(-50%, -75%) rotate(360deg);
+  }
+  100% {
+    top: 0;
+    border-radius: 50%;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes rad-juices {
+  0% {
+    left: -300px;
+  }
+  50% {
+    left: -300px;
+  }
+  100% {
+    left: -5px;
+  }
+}
+
+@keyframes rad-juices {
+  0% {
+    left: -300px;
+  }
+  50% {
+    left: -300px;
+  }
+  100% {
+    left: -5px;
+  }
+}
+
+.page .wrapper .berries_juices .animation-juices:hover .wave {
+  position: absolute;
+  top: -55px;
+  left: -153px;
+  width: 394px;
+  height: 488px;
+  border-top-right-radius: 50%;
+  background: #88BCB9;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.page .wrapper .berries_juices .animation-juices:hover .wave:after,
+.page .wrapper .berries_juices .animation-juices:hover .wave:before {
+  content: '';
+  position: absolute;
+  width: 155%;
+  height: 155%;
+  top: 0;
+  left: 30%;
+  -webkit-transform: translate(-50%, -75%);
+          transform: translate(-50%, -75%);
+}
+
+.page .wrapper .berries_juices .animation-juices:hover .wave:after {
+  background: #fff;
+  -webkit-animation: wave 0.5s linear forwards;
+          animation: wave 0.5s linear forwards;
+}
+
+.page .wrapper .berries_juices .animation-juices:hover .wave:before {
+  background: #fff;
+  -webkit-animation: wave 1s linear forwards;
+          animation: wave 1s linear forwards;
+}
+
+.page .wrapper .berries_juices .animation-juices:hover .radius-juices {
+  position: relative;
+  width: 227px;
+  height: 292px;
+  border-radius: 50%;
+  background-color: #88BCB9;
+  top: -4%;
+  left: -5px;
+  z-index: 2;
+  -webkit-animation: rad-berries 1.5s ease-out forwards;
+          animation: rad-berries 1.5s ease-out forwards;
+}
+
 .page .right-block {
+  width: 360px;
+  height: 562px;
+}
+
+.page .right-block .animation-vegetables {
+  position: absolute;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 24px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-left: 30px;
+  width: 360px;
+  height: 562px;
+  margin-top: 20px;
+  font-weight: 600;
+  color: red;
+  background-color: transparent;
+  border-radius: 3px;
+  position: relative;
+  overflow: hidden;
+}
+
+.page .right-block .animation-vegetables div {
+  position: relative;
+}
+
+.page .right-block .animation-vegetables .vegetable {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 360px;
   height: 562px;
   display: -webkit-box;
@@ -832,7 +1072,7 @@ h1, h2, h3, h4, h5, h6 {
           justify-content: space-between;
 }
 
-.page .right-block .text_flex_right {
+.page .right-block .animation-vegetables .vegetable .text_flex_right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -845,26 +1085,179 @@ h1, h2, h3, h4, h5, h6 {
   padding: 40px;
   padding-bottom: 0;
   padding-right: 0;
+  z-index: 3;
 }
 
-.page .right-block .text_flex_right button {
+.page .right-block .animation-vegetables .vegetable .text_flex_right button {
   color: #FFD452;
   margin-top: 42px;
 }
 
-.page .right-block .vegetables-img {
+.page .right-block .animation-vegetables .vegetable .vegetables-img {
   margin-left: 65px;
+  z-index: 1;
 }
 
-.page .right-block .button-see-hover {
+.page .right-block .animation-vegetables .vegetable .button-see-hover-vegetables {
   margin-top: 42px;
 }
 
-.page .right-block:hover .button-see-hover {
+@-webkit-keyframes seeHover-vegetables {
+  0% {
+    margin-right: -50px;
+    color: #FFD452;
+  }
+  100% {
+    margin-right: 0;
+    color: #FFF;
+  }
+}
+
+@keyframes seeHover-vegetables {
+  0% {
+    margin-right: -50px;
+    color: #FFD452;
+  }
+  100% {
+    margin-right: 0;
+    color: #FFF;
+  }
+}
+
+@-webkit-keyframes seeHover-btn-vegetables {
+  0% {
+    color: #FFD452;
+  }
+  100% {
+    color: #FFF;
+  }
+}
+
+@keyframes seeHover-btn-vegetables {
+  0% {
+    color: #FFD452;
+  }
+  100% {
+    color: #FFF;
+  }
+}
+
+.page .right-block .animation-vegetables .vegetable button {
+  background: none;
+  color: #FFD452;
+}
+
+.page .right-block .animation-vegetables .vegetable:hover .button-see-hover-vegetables {
   opacity: 1;
 }
 
-.page .right-block:hover button {
+.page .right-block .animation-vegetables .vegetable:hover .button-see-hover-vegetables img {
+  -webkit-animation: seeHover-vegetables 2.2s linear;
+          animation: seeHover-vegetables 2.2s linear;
+}
+
+.page .right-block .animation-vegetables .vegetable:hover button {
+  -webkit-animation: seeHover-btn-vegetables 2.2s linear;
+          animation: seeHover-btn-vegetables 2.2s linear;
   color: #FFF;
+}
+
+@keyframes wave {
+  0% {
+    top: 300px;
+    -webkit-transform: translate(0%, 0%) rotate(0deg);
+            transform: translate(0%, 0%) rotate(0deg);
+  }
+  0% {
+    top: 300px;
+    -webkit-transform: translate(-50%, -75%) rotate(360deg);
+            transform: translate(-50%, -75%) rotate(360deg);
+  }
+  100% {
+    top: 0;
+    border-radius: 50%;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes rad-vegetables {
+  0% {
+    top: -300px;
+    left: -300px;
+  }
+  50% {
+    top: -300px;
+    left: -300px;
+  }
+  100% {
+    left: -22px;
+    top: -2%;
+  }
+}
+
+@keyframes rad-vegetables {
+  0% {
+    top: -300px;
+    left: -300px;
+  }
+  50% {
+    top: -300px;
+    left: -300px;
+  }
+  100% {
+    left: -22px;
+    top: -2%;
+  }
+}
+
+.page .right-block .animation-vegetables:hover .wave {
+  position: absolute;
+  top: -163px;
+  left: -220px;
+  width: 597px;
+  height: 488px;
+  border-top-right-radius: 50%;
+  background: #FFD452;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.page .right-block .animation-vegetables:hover .wave:after,
+.page .right-block .animation-vegetables:hover .wave:before {
+  content: '';
+  position: absolute;
+  width: 155%;
+  height: 155%;
+  top: 0;
+  left: 30%;
+  -webkit-transform: translate(-50%, -75%);
+          transform: translate(-50%, -75%);
+}
+
+.page .right-block .animation-vegetables:hover .wave:after {
+  background: #fff;
+  -webkit-animation: wave 0.8s linear forwards;
+          animation: wave 0.8s linear forwards;
+}
+
+.page .right-block .animation-vegetables:hover .wave:before {
+  background: #fff;
+  -webkit-animation: wave 1.3s linear forwards;
+          animation: wave 1.3s linear forwards;
+}
+
+.page .right-block .animation-vegetables:hover .radius-vegetables {
+  position: relative;
+  width: 400px;
+  height: 292px;
+  border-radius: 50%;
+  background-color: #FFD452;
+  top: -48%;
+  left: -22px;
+  z-index: 2;
+  -webkit-animation: rad-vegetables 1.6s ease-out forwards;
+          animation: rad-vegetables 1.6s ease-out forwards;
 }
 /*# sourceMappingURL=style.css.map */
