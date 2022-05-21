@@ -66,14 +66,6 @@ $color_black_white:#FFF;
     color:$color_description_section;
 }
 
-.hidden {
-    display: none;
-}
-
-.show {
-    display: block;
-}
-
 @mixin see_button($c) {
     color: $c;
 }
@@ -237,74 +229,338 @@ $color_black_white:#FFF;
             flex-direction: column;
             justify-content: space-between;
             
-            .frutis {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                .frutis-img {
+            }
+
+            .animation {
+                position: absolute;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 24px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                padding: 20px 30px;
+                width: 750px;
+                height: 266px;
+                margin-top: 20px;
+                font-weight: 600;
+                color: red;
+                background-color: transparent;
+                /* border: 2px solid black; */
+                border-radius: 3px;
+                position: relative;
+                overflow: hidden;
+                  & div {
+                    position: relative;
+                  }
+                        
+                  .frutis {
+                    position: absolute;
+                    width: 750px;
+                    top: 0px;
+                    left: 0px;
                     display: flex;
-                    flex-direction: column;
-                    justify-content: end;                 
-                    margin-top: 24px;
-                }
-                &:hover {
-                    .button-see-hover {
+                    flex-direction: row;
+                    justify-content: space-between;
+                    .frutis-img {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: end;                 
+                        margin-top: 24px;
+                    }
+                    @keyframes seeHover {
+                        0% {
+                            margin-right: -50px;
+                        }
+                        100% {
+                            margin-right: 0;
+                        }
+                    } 
+                    button {
+                        background: none;
+                    }
+                    &:hover {
+                        
+                        .button-see-hover {
+                            opacity: 1;
+                            img {
+                                animation: seeHover 0.7s linear;
+                            }
+                            
+                        }
+                        button {
+                            color: $color_black_white;
+                            background: none;
+                        }
+                    }         
+                  }
+                  
+                  @keyframes wave {
+                    0% {
+                        top: 200px;
+                      transform: translate(0%, 0%) rotate(0deg);
+                    }
+                    0% {
+                        top: 200px;
+                      transform: translate(-50%, -75%) rotate(360deg);
+                    }
+                    100% {
+                        top: 0;
+                        border-radius: 50%;
                         opacity: 1;
                     }
-                    button {
-                        color: $color_black_white;
-                    }
-                }         
-            }
+                  }
+                
+                  @keyframes rad {
+                      0% {
+                        left: -300px;
+                      }
+                      50% {
+                          left: -300px;
+                      }
+                      100% {
+                          left: 115px;
+                      }
+                  }
+    
+                  &:hover {
+                      .wave {
+                        position: absolute;
+                        top: -55px;
+                        left: -2px;
+                        width: 372px;
+                        height: 479px;
+                        border-top-right-radius:50%;
+                        background: #CEAFC8;
+                        transform: rotate(90deg);
+                        transition: .5s ease;
+                        // display: none; 
+                      }
+                    
+                      .wave:after, & .wave:before {
+                        content: '';
+                        position: absolute;
+                        width: 155%;
+                        height: 155%;
+                        top: 0;
+                        left: 30%;
+                        transform: translate(-50%, -75%);
+                      }
+                      
+                      .wave:after {
+                        background: #fff;   
+                        animation: wave 0.5s linear forwards;
+                      }
+                      
+                      .wave:before {
+                        background: #fff;
+                        animation: wave 1s linear forwards;
+                      }
+                    
+                      .radius {
+                          position: relative;
+                          width: 227px;
+                          height: 292px;
+                          border-radius: 50%;
+                          background-color: #CEAFC8;
+                          top: -18%;
+                          left: 115px;
+                        //   display: none;
+                          animation: rad 1s ease-out forwards;
+                      }
+                  }
+              }
+
             .berries_juices {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
-                .berries {
+
+                .animation-berries {
+                    position: absolute;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    font-size: 24px;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    // padding: 20px 30px;
                     width: 360px;
                     height: 266px;
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    .berries-img {
+                    margin-top: 20px;
+                    font-weight: 600;
+                    color: red;
+                    background-color: transparent;
+                    // border: 2px solid black;
+                    border-radius: 3px;
+                    position: relative;
+                    overflow: hidden;
+
+                    div {
+                        position: relative;
+                    }
+
+                    .berries {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 360px;
+                        height: 266px;
                         display: flex;
-                        flex-direction: column;
-                        justify-content: end;      
+                        flex-direction: row;
+                        justify-content: space-between;
+                        .text_flex {
+                            z-index: 3;
+                        }
+
+                        .berries-img {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: end;
+                            z-index: 1;
+                        }
+
+                        @keyframes seeHover {
+                            0% {
+                                margin-right: -50px;
+                                @include see_button($color_orange);
+                            }
+                            100% {
+                                margin-right: 0;
+                                @include see_button($color_black_white);
+                            }
+                        } 
+
+                        @keyframes seeHover-btn {
+                            0% {                                
+                                @include see_button($color_orange);
+                            }
+                            100% {                          
+                                @include see_button($color_black_white);
+                            }
+                        }
+
+                        button {
+                            background: none;
+                            @include see_button($color_orange);
+                        }
+
+                        &:hover {                          
+                            .button-see-hover {
+                                opacity: 1;
+                                img {
+                                    animation: seeHover 1.5s linear;
+                                }                                                       
+                            }
+                            button {
+                                animation: seeHover-btn 1.5s linear;
+                                color: $color_black_white;
+                            }      
+                        }                
                     }
-                    button {
-                        @include see_button($color_orange);
-                    }
-                    &:hover {
-                        .button-see-hover {
+
+                    @keyframes wave {
+                        0% {
+                            top: 200px;
+                            transform: translate(0%, 0%) rotate(0deg);
+                        }
+
+                        0% {
+                            top: 200px;
+                            transform: translate(-50%, -75%) rotate(360deg);
+                        }
+
+                        100% {
+                            top: 0;
+                            border-radius: 50%;
                             opacity: 1;
                         }
-                        button {
-                            color: $color_black_white;
+                    }
+
+                    @keyframes rad-berries {
+                        0% {
+                            left: -300px;
+                        }
+
+                        50% {
+                            left: -300px;
+                        }
+
+                        100% {
+                            left: -5px;
+                        }
+                    }
+         
+                    &:hover {
+                        .wave {
+                            position: absolute;
+                            top: -55px;
+                            left: -153px;
+                            width: 394px;
+                            height: 488px;
+                            border-top-right-radius: 50%;
+                            background: #FC8663;
+                            transform: rotate(90deg);
+                            transition: .5s ease;
+                            // display: none; 
+                        }
+    
+                        .wave:after,
+                        & .wave:before {
+                            content: '';
+                            position: absolute;
+                            width: 155%;
+                            height: 155%;
+                            top: 0;
+                            left: 30%;
+                            transform: translate(-50%, -75%);
+                        }
+    
+                        .wave:after {
+                            background: #fff;
+                            animation: wave 0.5s linear forwards;
+                        }
+    
+                        .wave:before {
+                            background: #fff;
+                            animation: wave 1s linear forwards;
+                        }
+    
+                        .radius-berries {
+                            position: relative;
+                            width: 227px;
+                            height: 292px;
+                            border-radius: 50%;
+                            background-color: #FC8663;
+                            top: -4%;
+                            left: -5px;
+                            z-index: 2;
+                            //   display: none;
+                            animation: rad-berries 1.5s ease-out forwards;
                         }
                     }
                 }
-                .juices {
-                    width: 360px;
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    .juices-img {
+
+                .animation-jucies{
+                    .juices {
+                        width: 360px;
                         display: flex;
-                        flex-direction: column;
-                        justify-content: end;       
-                    }
-                    button {
-                        @include see_button($color_turquoise);
-                    }
-                    &:hover {
-                        .button-see-hover {
-                            opacity: 1;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        .juices-img {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: end;       
                         }
                         button {
-                            color: $color_black_white;
+                            @include see_button($color_turquoise);
+                        }
+                        &:hover {
+                            .button-see-hover {
+                                opacity: 1;
+                            }
+                            button {
+                                color: $color_black_white;
+                            }
                         }
                     }
-                }
+                }              
             }
         }
         .right-block {
@@ -343,6 +599,6 @@ $color_black_white:#FFF;
         }
     }
 
-}
+
 
 

@@ -127,14 +127,6 @@ h1, h2, h3, h4, h5, h6 {
   color: #052E43;
 }
 
-.hidden {
-  display: none;
-}
-
-.show {
-  display: block;
-}
-
 .page {
   margin: 0 auto;
   width: 1920px;
@@ -375,7 +367,34 @@ h1, h2, h3, h4, h5, h6 {
           justify-content: space-between;
 }
 
-.page .wrapper .left-block .frutis {
+.page .wrapper .animation {
+  position: absolute;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 24px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 20px 30px;
+  width: 750px;
+  height: 266px;
+  margin-top: 20px;
+  font-weight: 600;
+  color: red;
+  background-color: transparent;
+  /* border: 2px solid black; */
+  border-radius: 3px;
+  position: relative;
+  overflow: hidden;
+}
+
+.page .wrapper .animation div {
+  position: relative;
+}
+
+.page .wrapper .animation .frutis {
+  position: absolute;
+  width: 750px;
+  top: 0px;
+  left: 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -388,7 +407,7 @@ h1, h2, h3, h4, h5, h6 {
           justify-content: space-between;
 }
 
-.page .wrapper .left-block .frutis .frutis-img {
+.page .wrapper .animation .frutis .frutis-img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -402,15 +421,152 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 24px;
 }
 
-.page .wrapper .left-block .frutis:hover .button-see-hover {
+@-webkit-keyframes seeHover {
+  0% {
+    margin-right: -50px;
+  }
+  100% {
+    margin-right: 0;
+  }
+}
+
+@keyframes seeHover {
+  0% {
+    margin-right: -50px;
+  }
+  100% {
+    margin-right: 0;
+  }
+}
+
+.page .wrapper .animation .frutis button {
+  background: none;
+}
+
+.page .wrapper .animation .frutis:hover .button-see-hover {
   opacity: 1;
 }
 
-.page .wrapper .left-block .frutis:hover button {
-  color: #FFF;
+.page .wrapper .animation .frutis:hover .button-see-hover img {
+  -webkit-animation: seeHover 0.7s linear;
+          animation: seeHover 0.7s linear;
 }
 
-.page .wrapper .left-block .berries_juices {
+.page .wrapper .animation .frutis:hover button {
+  color: #FFF;
+  background: none;
+}
+
+@-webkit-keyframes wave {
+  0% {
+    top: 200px;
+    -webkit-transform: translate(0%, 0%) rotate(0deg);
+            transform: translate(0%, 0%) rotate(0deg);
+  }
+  0% {
+    top: 200px;
+    -webkit-transform: translate(-50%, -75%) rotate(360deg);
+            transform: translate(-50%, -75%) rotate(360deg);
+  }
+  100% {
+    top: 0;
+    border-radius: 50%;
+    opacity: 1;
+  }
+}
+
+@keyframes wave {
+  0% {
+    top: 200px;
+    -webkit-transform: translate(0%, 0%) rotate(0deg);
+            transform: translate(0%, 0%) rotate(0deg);
+  }
+  0% {
+    top: 200px;
+    -webkit-transform: translate(-50%, -75%) rotate(360deg);
+            transform: translate(-50%, -75%) rotate(360deg);
+  }
+  100% {
+    top: 0;
+    border-radius: 50%;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes rad {
+  0% {
+    left: -300px;
+  }
+  50% {
+    left: -300px;
+  }
+  100% {
+    left: 115px;
+  }
+}
+
+@keyframes rad {
+  0% {
+    left: -300px;
+  }
+  50% {
+    left: -300px;
+  }
+  100% {
+    left: 115px;
+  }
+}
+
+.page .wrapper .animation:hover .wave {
+  position: absolute;
+  top: -55px;
+  left: -2px;
+  width: 372px;
+  height: 479px;
+  border-top-right-radius: 50%;
+  background: #CEAFC8;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.page .wrapper .animation:hover .wave:after, .page .wrapper .animation:hover .wave:before {
+  content: '';
+  position: absolute;
+  width: 155%;
+  height: 155%;
+  top: 0;
+  left: 30%;
+  -webkit-transform: translate(-50%, -75%);
+          transform: translate(-50%, -75%);
+}
+
+.page .wrapper .animation:hover .wave:after {
+  background: #fff;
+  -webkit-animation: wave 0.5s linear forwards;
+          animation: wave 0.5s linear forwards;
+}
+
+.page .wrapper .animation:hover .wave:before {
+  background: #fff;
+  -webkit-animation: wave 1s linear forwards;
+          animation: wave 1s linear forwards;
+}
+
+.page .wrapper .animation:hover .radius {
+  position: relative;
+  width: 227px;
+  height: 292px;
+  border-radius: 50%;
+  background-color: #CEAFC8;
+  top: -18%;
+  left: 115px;
+  -webkit-animation: rad 1s ease-out forwards;
+          animation: rad 1s ease-out forwards;
+}
+
+.page .wrapper .berries_juices {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -423,7 +579,31 @@ h1, h2, h3, h4, h5, h6 {
           justify-content: space-between;
 }
 
-.page .wrapper .left-block .berries_juices .berries {
+.page .wrapper .berries_juices .animation-berries {
+  position: absolute;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 24px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  width: 360px;
+  height: 266px;
+  margin-top: 20px;
+  font-weight: 600;
+  color: red;
+  background-color: transparent;
+  border-radius: 3px;
+  position: relative;
+  overflow: hidden;
+}
+
+.page .wrapper .berries_juices .animation-berries div {
+  position: relative;
+}
+
+.page .wrapper .berries_juices .animation-berries .berries {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 360px;
   height: 266px;
   display: -webkit-box;
@@ -438,7 +618,11 @@ h1, h2, h3, h4, h5, h6 {
           justify-content: space-between;
 }
 
-.page .wrapper .left-block .berries_juices .berries .berries-img {
+.page .wrapper .berries_juices .animation-berries .berries .text_flex {
+  z-index: 3;
+}
+
+.page .wrapper .berries_juices .animation-berries .berries .berries-img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -449,21 +633,152 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
+  z-index: 1;
 }
 
-.page .wrapper .left-block .berries_juices .berries button {
+@keyframes seeHover {
+  0% {
+    margin-right: -50px;
+    color: #FC8663;
+  }
+  100% {
+    margin-right: 0;
+    color: #FFF;
+  }
+}
+
+@-webkit-keyframes seeHover-btn {
+  0% {
+    color: #FC8663;
+  }
+  100% {
+    color: #FFF;
+  }
+}
+
+@keyframes seeHover-btn {
+  0% {
+    color: #FC8663;
+  }
+  100% {
+    color: #FFF;
+  }
+}
+
+.page .wrapper .berries_juices .animation-berries .berries button {
+  background: none;
   color: #FC8663;
 }
 
-.page .wrapper .left-block .berries_juices .berries:hover .button-see-hover {
+.page .wrapper .berries_juices .animation-berries .berries:hover .button-see-hover {
   opacity: 1;
 }
 
-.page .wrapper .left-block .berries_juices .berries:hover button {
+.page .wrapper .berries_juices .animation-berries .berries:hover .button-see-hover img {
+  -webkit-animation: seeHover 1.5s linear;
+          animation: seeHover 1.5s linear;
+}
+
+.page .wrapper .berries_juices .animation-berries .berries:hover button {
+  -webkit-animation: seeHover-btn 1.5s linear;
+          animation: seeHover-btn 1.5s linear;
   color: #FFF;
 }
 
-.page .wrapper .left-block .berries_juices .juices {
+@keyframes wave {
+  0% {
+    top: 200px;
+    -webkit-transform: translate(0%, 0%) rotate(0deg);
+            transform: translate(0%, 0%) rotate(0deg);
+  }
+  0% {
+    top: 200px;
+    -webkit-transform: translate(-50%, -75%) rotate(360deg);
+            transform: translate(-50%, -75%) rotate(360deg);
+  }
+  100% {
+    top: 0;
+    border-radius: 50%;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes rad-berries {
+  0% {
+    left: -300px;
+  }
+  50% {
+    left: -300px;
+  }
+  100% {
+    left: -5px;
+  }
+}
+
+@keyframes rad-berries {
+  0% {
+    left: -300px;
+  }
+  50% {
+    left: -300px;
+  }
+  100% {
+    left: -5px;
+  }
+}
+
+.page .wrapper .berries_juices .animation-berries:hover .wave {
+  position: absolute;
+  top: -55px;
+  left: -153px;
+  width: 394px;
+  height: 488px;
+  border-top-right-radius: 50%;
+  background: #FC8663;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.page .wrapper .berries_juices .animation-berries:hover .wave:after,
+.page .wrapper .berries_juices .animation-berries:hover .wave:before {
+  content: '';
+  position: absolute;
+  width: 155%;
+  height: 155%;
+  top: 0;
+  left: 30%;
+  -webkit-transform: translate(-50%, -75%);
+          transform: translate(-50%, -75%);
+}
+
+.page .wrapper .berries_juices .animation-berries:hover .wave:after {
+  background: #fff;
+  -webkit-animation: wave 0.5s linear forwards;
+          animation: wave 0.5s linear forwards;
+}
+
+.page .wrapper .berries_juices .animation-berries:hover .wave:before {
+  background: #fff;
+  -webkit-animation: wave 1s linear forwards;
+          animation: wave 1s linear forwards;
+}
+
+.page .wrapper .berries_juices .animation-berries:hover .radius-berries {
+  position: relative;
+  width: 227px;
+  height: 292px;
+  border-radius: 50%;
+  background-color: #FC8663;
+  top: -4%;
+  left: -5px;
+  z-index: 2;
+  -webkit-animation: rad-berries 1.5s ease-out forwards;
+          animation: rad-berries 1.5s ease-out forwards;
+}
+
+.page .wrapper .berries_juices .animation-jucies .juices {
   width: 360px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -477,7 +792,7 @@ h1, h2, h3, h4, h5, h6 {
           justify-content: space-between;
 }
 
-.page .wrapper .left-block .berries_juices .juices .juices-img {
+.page .wrapper .berries_juices .animation-jucies .juices .juices-img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -490,19 +805,19 @@ h1, h2, h3, h4, h5, h6 {
           justify-content: end;
 }
 
-.page .wrapper .left-block .berries_juices .juices button {
+.page .wrapper .berries_juices .animation-jucies .juices button {
   color: #88BCB9;
 }
 
-.page .wrapper .left-block .berries_juices .juices:hover .button-see-hover {
+.page .wrapper .berries_juices .animation-jucies .juices:hover .button-see-hover {
   opacity: 1;
 }
 
-.page .wrapper .left-block .berries_juices .juices:hover button {
+.page .wrapper .berries_juices .animation-jucies .juices:hover button {
   color: #FFF;
 }
 
-.page .wrapper .right-block {
+.page .right-block {
   width: 360px;
   height: 562px;
   display: -webkit-box;
@@ -517,7 +832,7 @@ h1, h2, h3, h4, h5, h6 {
           justify-content: space-between;
 }
 
-.page .wrapper .right-block .text_flex_right {
+.page .right-block .text_flex_right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -532,28 +847,24 @@ h1, h2, h3, h4, h5, h6 {
   padding-right: 0;
 }
 
-.page .wrapper .right-block .text_flex_right button {
+.page .right-block .text_flex_right button {
   color: #FFD452;
   margin-top: 42px;
 }
 
-.page .wrapper .right-block .vegetables-img {
+.page .right-block .vegetables-img {
   margin-left: 65px;
 }
 
-.page .wrapper .right-block .button-see-hover {
+.page .right-block .button-see-hover {
   margin-top: 42px;
 }
 
-.page .wrapper .right-block:hover .button-see-hover {
+.page .right-block:hover .button-see-hover {
   opacity: 1;
 }
 
-.page .wrapper .right-block:hover button {
+.page .right-block:hover button {
   color: #FFF;
 }
-
-/* animation */
-
-
 /*# sourceMappingURL=style.css.map */
